@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style type="text/css">
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        .absolute{position:absolute !important}
+.block{display:block !important}
+.bottom-0{bottom:0 !important}
+#app .container{max-width:1200px;margin-left:auto !important;margin-right:auto !important}
+.flex{display:flex !important}
+.flex-col{flex-direction:column !important}
+.flex-wrap{flex-wrap:wrap !important}
+.font-black{font-weight:900 !important}
+.font-bold{font-weight:700 !important}
+.font-500{font-weight:500}
+.h-auto{height:auto !important}
+.h-full{height:100% !important}
+.hidden{display:none !important}
+.inline-block{display:inline-block !important}
+.items-center{align-items:center !important}
+.items-end{align-items:flex-end !important}
+.justify-between{justify-content:space-between !important}
+.justify-center{justify-content:center !important}
+.justify-end{justify-content:flex-end !important}
+.justify-evenly{justify-content:space-evenly !important}
+.left-0{left:0 !important}
+.left-auto{left:auto !important}
+.-mt-12{margin-top:-3rem !important}
+.mb-2{margin-bottom:0.5rem !important}
+.mb-3{margin-bottom:0.75rem !important}
+.mb-4{margin-bottom:1rem !important}
+.mb-6{margin-bottom:1.5rem !important}
+.mb-8{margin-bottom:2rem !important}
+.mb-10{margin-bottom:2.5rem !important}
+.mb-12{margin-bottom:3rem !important}
+.mb-16{margin-bottom:4rem !important}
+.ml-4{margin-left:1rem !important}
+.mt-auto{margin-top:auto !important}
+.mt-0{margin-top:0 !important}
+.mt-6{margin-top:1.5rem !important}
+.mt-10{margin-top:2.5rem !important}
+.mt-16{margin-top:4rem !important}
+.mx-auto{margin-left:auto !important;margin-right:auto !important}
+.my-16{margin-top:4rem !important;margin-bottom:4rem !important}
+.object-cover{object-fit:cover !important}
+.object-center{object-position:center !important}
+.opacity-0{opacity:0 !important}
+.overflow-x-hidden{overflow-x:hidden !important}
+.overflow-y-hidden{overflow-y:hidden !important}
+.pointer-events-none{pointer-events:none !important}
+.pb-6{padding-bottom:1.5rem !important}
+.pt-16{padding-top:4rem !important}
+.p-4{padding:1rem !important}
+.px-0{padding-left:0 !important;padding-right:0 !important}
+.px-2{padding-left:0.5rem !important;padding-right: 0.5rem !important;}
+.px-4{padding-left:1rem !important;padding-right:1rem !important}
+.py-16{padding-top:4rem !important;padding-bottom:4rem !important}
+.ratio{position:relative;width:100%;z-index:2;}
+.ratio-16x9{padding-bottom:56.25%}
+.relative{position:relative !important}
+.right-0{right:0 !important}
+.si{display:inline-block;height:1.2em;width:1.2em;vertical-align:middle;position:relative;top:-0.0625em;text-align:center;stroke-width:0;overflow:visible;}
+.si path{stroke:currentColor;stroke-width:2%;}
+.text-center{text-align:center !important}
+.text-orange{color:#fca82f !important}
+.text-right{text-align:right !important}
+.text-white{color:#ffffff !important}
+.top-0{top:0 !important}
+.transition-all{transition:all 250ms ease}
+.w-2\/12{width: 16.666667% !important}
+.w-3\/12{width: 25% !important}
+.w-5\/12{width: 41.666667% !important}
+.w-1\/2,.w-6\/12{width:50% !important}
+.w-auto{width:auto !important}
+.w-full{width:100% !important}
+.z-1{z-index:1}
+
+@media(min-width: 992px){
+    .md\:flex{display:flex !important}
+    .md\:hidden{display:none !important}
+}
+
+@media(min-width: 1024px){
+    #app .container{max-width:992px}
+    .lg\:block{display:block !important}
+    .lg\:flex{display:flex !important}
+    .lg\:flex-row-reverse{flex-direction:row-reverse !important}
+    .lg\:flex-wrap{flex-wrap:wrap !important}
+    .lg\:hidden{display:none !important}
+    .lg\:mb-0{margin-bottom:0 !important}
+    .lg\:mb-10{margin-bottom:2.5rem !important}
+    .lg\:mb-12{margin-bottom:3rem !important}
+    .lg\:mb-14{margin-bottom:3.5rem !important}
+    .lg\:ml-0{margin-left:0 !important}
+    .lg\:-mt-16{margin-top:-4rem !important}
+    .lg\:px-4{padding-left:1rem !important;padding-right:1rem !important}
+    .lg\:text-left{text-align:left !important}
+    .lg\:w-4\/12{width:33.333333% !important}
+    .lg\:w-5\/12{width:41.666667% !important}
+    .lg\:w-5\.5\/12{width:49% !important}
+    .lg\:w-6\/12{width:50% !important}
+    .lg\:w-7\/12{width:58.333333% !important}
+    .lg\:w-8\/12{width:66.666667% !important}
+    .lg\:w-auto{width:auto !important}
+}
+
+@media(min-width: 1120px){
+    #app .container{max-width:1075px}
+}
+@media(min-width: 1200px){
+    #app .container{max-width:1170px}
+}
+@media(min-width: 1300px){
+    #app .container{max-width:1260px}
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb,
+.scrollbar-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+        /* #sec2 start */
+        .sec2-content {
+            z-index: 1;
+        }
+        .sec2-content p {
+            line-height: 1.9;
+        }
+        .sec2_vid_box {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            background-image: linear-gradient(#cef3fb, #fff);
+            padding: 10px;
+            max-width: 90%;
+        }
+        .sec2_vid_box,
+        .sec2_vid_box .ratio,
+        .sec2_vid_box iframe{
+            border-radius: 9px;
+        }
+        .sec2_vid_box::after{
+            content: "";
+            position: absolute;
+            display: block;
+            left: 5px;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            background-color: #fff;
+            border-radius: 9px;
+        }
+        #sec2 {
+            background-color: #ffffff;
+        }
+        #sec2 .text-video {
+            color: #ffffff;
+            background-color: #000000;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 3px 6px 1px;
+        }
+        .sec2_live_img {
+            position: absolute;
+            width: 881px;
+            z-index: 1;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sec2_live_video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+        .sec2_live_text {
+            position: relative;
+            padding-top: 200px;
+        }
+
+        #extra-white-for-img::before,
+        #extra-white-for-img::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10%;
+            height: 100%;
+            background-color: #fff;
+        }
+        #extra-white-for-img::before {
+            left: 0;
+        }
+        #extra-white-for-img::after {
+            right: 0;
+        }
+
+        #sec2_pc {
+            min-height: 100vh;
+            max-width: 2000px;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 1px solid #ffffff;
+        }
+        @media(min-width: 600px){
+            .sec2_vid_box {max-width: 520px;}
+            .sec2-content {max-width: 484px;}
+        }
+        @media(min-width: 1100px){
+            #extra-white-for-img::before,
+            #extra-white-for-img::after {
+                width: 18%;
+            }
+        }
+        @media(min-width: 1350px){
+            #extra-white-for-img::before,
+            #extra-white-for-img::after {
+                width: 22%;
+            }
+        }
+        @media(min-width: 1550px){
+            #extra-white-for-img::before,
+            #extra-white-for-img::after {
+                width: 26%;
+            }
+        }
+        @media(min-width: 1800px){
+            #extra-white-for-img::before,
+            #extra-white-for-img::after {
+                width: 30%;
+            }
+        }
+        /* #sec2 end */
+    </style>
+</head>
+<body class="m-0 p-0">
+
+<section style="height:200px"></section>
+
+<section id="sec2" class="relative overflow-x-hidden scrollbar-transparent">
+    <div id="sec2_pc" data-aos="fade-up" class="sec2_pc overflow-x-hidden overflow-y-hidden text-center">
+        <div id="sec2_live_video" class="sec2_live_video h-full">
+            <iframe src="https://player.vimeo.com/not-video/656978137?muted=1&autoplay=1&loop=1&h=0c0f48975c&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="absolute top-0 right-0 left-0 bottom-0 w-full h-full" title="SunShell Power - Solar Power Plant"></iframe>
+        </div>
+        <div id="extra-white-for-img" class="absolute top-0 left-0 right-0 bottom-0 h-full w-full"></div>
+        <div id="sec2_live_text" class="sec2_live_text h-full">
+            <img id="sec2_live_img" class="sec2_live_img pointer-events-none" src="./live-text-img.png?new=1" alt="" />
+            <div data-aos="fade-up" data-aos-delay="100" id="sec2-content_pc" class="sec2-content relative mb-6 mx-auto">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that is has a more-or-less normal.</p>
+            </div>
+            <a data-aos="fade-up" data-aos-delay="200" id="sec2-link_pc" href="<?php echo $sec2['link']['url']; ?>" class="custom-link-circle mb-6 font-bold">
+                How we can help? TALK TO AN EXPERT
+            </a>
+            <span id="delay-el"></span>
+        </div>
+    </div>
+</section>
+
+
+<script src="./gsap.min.js"></script>
+<script src="./scroll-trigger.min.js"></script>
+<script type="text/javascript">
+(function(){
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set('#sec2_live_img',{top:'-1px',left:0,right:0,x:0,transformOrigin:'top center'})
+    var tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#sec2_pc',
+            start: 'top top+=0',
+            end: '+=400%',
+            scrub: 0.5,
+            pin: true,
+        }
+    })
+    .to('#sec2_live_img',{ scale:15, x: '-220%', y: '-45%', duration: 7,}, -1)
+    .to('#sec2-content_pc', {opacity:0,}, -1)
+    .to('#sec2-link_pc', {opacity:0,}, -1)
+    .to('#extra-white-for-img', {opacity: 0}, 0)
+    .to('#sec2_live_img', {opacity: 0})
+    .to('#sec2_live_video', {y:-77}, 0)
+    .to('#delay-el', {duration: 3})
+
+})();
+
+</script>
+</body>
+</html>
