@@ -249,11 +249,13 @@
 <section id="sec2" class="relative overflow-x-hidden scrollbar-transparent">
     <div id="sec2_pc" data-aos="fade-up" class="sec2_pc overflow-x-hidden overflow-y-hidden text-center">
         <div id="sec2_live_video" class="sec2_live_video h-full">
-            <iframe src="https://player.vimeo.com/video/656978137?muted=1&autoplay=1&loop=1&h=0c0f48975c&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="absolute top-0 right-0 left-0 bottom-0 w-full h-full" title="SunShell Power - Solar Power Plant"></iframe>
+            <iframe src="https://player.vimeo.com/nvideo/656978137?muted=1&autoplay=1&loop=1&h=0c0f48975c&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="absolute top-0 right-0 left-0 bottom-0 w-full h-full" title="SunShell Power - Solar Power Plant"></iframe>
         </div>
-        <div id="extra-white-for-img" class="absolute top-0 left-0 right-0 bottom-0 h-full w-full"></div>
+        <div id="extra-white-for-img" class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">&nbsp;</div>
         <div id="sec2_live_text" class="sec2_live_text h-full">
-            <img id="sec2_live_img" class="sec2_live_img pointer-events-none" src="./live-text-img.png?new=1" alt="" />
+            <div id="sec2_live_img" class="sec2_live_img pointer-events-none">
+                <img  src="./live-text-img.png?new=1" class="w-full h-auto" alt="" />
+            </div>
             <div data-aos="fade-up" data-aos-delay="100" id="sec2-content_pc" class="sec2-content relative mb-6 mx-auto">
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that is has a more-or-less normal.</p>
             </div>
@@ -294,7 +296,12 @@
     .to('#sec2_live_video', {y:-77}, 0)
     .to('#delay-el', {duration: 3})
 
+
 })();
+
+window.addEventListener('load', function(){
+    ScrollTrigger.refresh()
+})
 
 </script>
 </body>
